@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <title>Shortly — URL Shortener</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="shortener-card" aria-labelledby="page-title">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">↗</div>
+          <span>Shortly</span>
+        </div>
+
+        <div class="heading">
+          <p class="eyebrow">Simple link manager</p>
+          <h1 id="page-title">Make a long link short.</h1>
+          <p>Paste your URL below and get a clean, shareable link in seconds.</p>
+        </div>
+
+        <form class="form" id="form" novalidate>
+          <label for="url">Destination URL</label>
+          <div class="input-row">
+            <input
+              type="url"
+              name="url"
+              id="url"
+              value=""
+              placeholder="https://example.com/a-very-long-link"
+              autocomplete="url"
+              required
+            />
+            <button type="submit" class="btn" id="submit-btn">
+              <span class="button-text">Shorten</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="error" role="alert" aria-live="polite"></div>
+        </form>
+
+        <div class="link-wrapper" aria-live="polite">
+          <div class="result-heading">
+            <span>Your shortened link</span>
+            <span class="success-badge">Ready</span>
+          </div>
+          <div class="result-row">
+            <a class="short-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+            <button type="button" class="copy-btn" aria-label="Copy shortened link">Copy</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
